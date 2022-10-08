@@ -1,0 +1,59 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "SDL2",
+            "command": "D:\\msys2\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "VER2/math/vec.cpp",
+                "VER2/math/mat.cpp",
+                "VER2/math/tri.cpp",
+                "VER2/math/cube.cpp",
+                "VER2/math/donut.cpp",
+                "-Isrc/include",
+                "-Lsrc/lib",
+                "-lmingw32",
+                "-lSDL2main",
+                "-lSDL2",
+                "-mwindows"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Zadanie wygenerowane przez debuger."
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: cpp.exe kompiluj aktywny plik",
+            "command": "D:\\msys2\\mingw64\\bin\\cpp.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "Zadanie wygenerowane przez debuger."
+        }
+    ],
+    "version": "2.0.0"
+}
