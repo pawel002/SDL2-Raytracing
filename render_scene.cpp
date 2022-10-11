@@ -9,16 +9,16 @@
 #include <memory>
 #include <typeinfo>
 #include <chrono>
-#include "utils/functions.hpp"
-#include "utils/vec3.hpp"
-#include "utils/ray.hpp"
-#include "utils/sphere.hpp"
-#include "utils/plane.hpp"
-#include "utils/triangle.hpp"
-#include "utils/hittable.hpp"
-#include "utils/hittable_list.hpp"
-#include "utils/camera.hpp"
-#include "utils/material.hpp"
+#include "utils1/functions.hpp"
+#include "utils1/vec3.hpp"
+#include "utils1/ray.hpp"
+#include "utils1/sphere.hpp"
+#include "utils1/plane.hpp"
+#include "utils1/triangle.hpp"
+#include "utils1/hittable.hpp"
+#include "utils1/hittable_list.hpp"
+#include "utils1/camera.hpp"
+#include "utils1/material.hpp"
 
 using std::endl, std::cout, std::max, std::min;
 const double INF = std::numeric_limits<double>::infinity();
@@ -124,7 +124,7 @@ int main(int argv, char** args){
 	// world.add(make_shared<triangle>(point3(-3,5,-3), point3(-3,5,0), point3(3,5,-3), material_walls));
 
 	// SPHERE
-	world.add(make_shared<sphere>(point3( 1.0, 1.0, -1.0),   1.0, material_right));
+	world.add(make_shared<sphere>(point3( 1.0, 3.0, -1.0),   1.0, material_right));
 
 	// LOAD SKYBOX
 	SDL_Surface* skybox = IMG_Load("textures/castle1.jpg");
