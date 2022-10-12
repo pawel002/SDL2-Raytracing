@@ -208,9 +208,7 @@ int main(int argv, char** args){
 			case SDL_KEYDOWN:
 				// quiting programm
 				if(event.key.keysym.sym == SDLK_ESCAPE)
-				{
 					isRunning = false;
-				}
 
 				// fullscreen
 				if(event.key.keysym.sym == SDLK_f){
@@ -241,7 +239,7 @@ int main(int argv, char** args){
 				// DEPTH_BUFFER[j*WIDTH + i] = ray_c[0];
 
 				// draw_pixel(renderer, rect, resolution, ray_c, i, j);
-				SDL_SetRenderDrawColor(renderer, UINT8_LOOK_UP[static_cast<int>(ray_c[0] * 255)], UINT8_LOOK_UP[static_cast<int>(ray_c[0] * 255)], UINT8_LOOK_UP[static_cast<int>(ray_c[0] * 255)], 255);
+				SDL_SetRenderDrawColor(renderer, static_cast<int>(ray_c[0] * 255), static_cast<int>(ray_c[0] * 255), static_cast<int>(ray_c[0] * 255), 255);
 				rect.x = i;
 				rect.y = j;
 				SDL_RenderFillRect(renderer, &rect);
