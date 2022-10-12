@@ -80,6 +80,7 @@ class camera {
                         KEY_PRESSED[9] = false;
             }
 
+        // handle keyboard in one function and add second function handle_movement for updateing camera
             if(KEY_PRESSED[6]){
                 theta += M_PI / 180.f;
                 if(theta >= M_PI_2 - 0.01f)
