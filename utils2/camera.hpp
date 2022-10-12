@@ -54,16 +54,22 @@ class camera {
                             phi += 2 * M_PI;
                     }
                     else if(event.key.keysym.sym == SDLK_w){
-                        origin += cam_speed * vec3(cosf(phi), 0, sinf(phi));
+                        origin -= cam_speed * vec3(sinf(phi), 0, cosf(phi));
                     }
                     else if(event.key.keysym.sym == SDLK_s){
-                        origin -= cam_speed * vec3(cosf(phi), 0, sinf(phi));
+                        origin += cam_speed * vec3(sinf(phi), 0, cosf(phi));
                     }
                     else if(event.key.keysym.sym == SDLK_d){
-                        origin += cam_speed * vec3(cosf(phi + M_PI_2), 0, sinf(phi + M_PI_2));
+                        origin += cam_speed * vec3(sinf(phi + M_PI_2), 0, cosf(phi + M_PI_2));
                     }
                     else if(event.key.keysym.sym == SDLK_a){
-                        origin -= cam_speed * vec3(cosf(phi + M_PI_2), 0, sinf(phi + M_PI_2));
+                        origin -= cam_speed * vec3(sinf(phi + M_PI_2), 0, cosf(phi + M_PI_2));
+                    }
+                    else if(event.key.keysym.sym == SDLK_SPACE){
+                        origin += cam_speed * vec3(0, 1, 0);
+                    }
+                    else if(event.key.keysym.sym == SDLK_LCTRL){
+                        origin -= cam_speed * vec3(0, 1, 0);
                     }
             }
 
