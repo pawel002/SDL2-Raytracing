@@ -201,19 +201,19 @@ int main(int argv, char** args){
 		// Handling events
 		while(SDL_PollEvent(&event)){
 			switch(event.type){
-			case SDL_QUIT:
-				isRunning = false;
-				break;
-
-			case SDL_KEYDOWN:
-				// quiting programm
-				if(event.key.keysym.sym == SDLK_ESCAPE)
+				case SDL_QUIT:
 					isRunning = false;
-
-				// fullscreen
-				if(event.key.keysym.sym == SDLK_f){
-					SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN);
-				}
+					break;
+	
+				case SDL_KEYDOWN:
+					// quiting programm
+					if(event.key.keysym.sym == SDLK_ESCAPE)
+						isRunning = false;
+	
+					// fullscreen
+					if(event.key.keysym.sym == SDLK_f){
+						SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN);
+					}
 			}
 
 			cam.handle_inputs(event);
